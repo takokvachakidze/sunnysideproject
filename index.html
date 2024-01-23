@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SunnySide</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header class="flex items-center justify-between">
-      <div class="w-full h-screen">
+      <div class="w-full h-screen sm:max-h-full sm: w-full">
         <img
           class="w-full h-screen object-cover"
           src="img/image-header.jpg"
@@ -17,9 +19,20 @@
         />
       </div>
       <div class="absolute top-[1%]">
-        <h1 class="px-10 py-8 text-white text-3xl font-semibold">sunnyside</h1>
+        <h1
+          class="lg:px-10 lg:py-8 text-white lg:text-3xl font-semibold sm:text-4xl sm:py-3 sm:pl-4"
+        >
+          sunnyside
+        </h1>
       </div>
-      <div class="absolute top-[6%] left-[70%]">
+      <div class="lg:hidden sm:absolute top-[3%] left-[85%]">
+        <ion-icon
+          class="text-5xl text-white cursor-pointer"
+          name="menu-outline"
+        ></ion-icon>
+      </div>
+      <div class="lg:absolute top-[3%] left-[90%] sm:hidden"></div>
+      <div class="lg:absolute lg:top-[6%] lg:left-[70%] sm: hidden lg:block">
         <a
           class="px-3 py-7 text-white font-semibold text-[16px] hover:text-[#212427] transition-all duration-500"
           href="#"
@@ -44,12 +57,14 @@
       <div
         class="absolute top-[25%] left-[50%] -translate-x-1/2 -translate-y-1/2"
       >
-        <h1 class="text-white text-5xl font-semibold tracking-[8px]">
+        <h1
+          class="text-white lg:text-5xl lg:font-semibold lg:tracking-[8px] sm:text-6xl sm:text-center xs:text-red-500"
+        >
           WE ARE CREATIVE
         </h1>
       </div>
     </header>
-    <section class="grid grid-cols-2 gap-4">
+    <section class="lg:grid grid-cols-2 gap-4 sm:columns-1 sm:mr-2">
       <div class="py-[190px] pl-[80px]">
         <h1 class="text-[#020202c6] font-extrabold text-4xl mb-4">
           Transform your brand
@@ -71,10 +86,12 @@
         <img class="w-full h-[95%]" src="img/image-transform.jpg" alt="" />
       </div>
     </section>
-    <section class="grid grid-cols-2 gap-4">
+    <section
+      class="lg:grid grid-cols-2 gap-4 sm:columns-1 sm:flex flex-col-reverse"
+    >
       <div>
         <img
-          class="w-full h-[95%] mt-[-30px] ml-4"
+          class="lg:w-full lg:h-[95%] lg:mt-[-30px] lg:ml-4 sm:mt-0 sm:ml-0"
           src="img/image-stand-out.jpg"
           alt=""
         />
@@ -97,19 +114,21 @@
         </button>
       </div>
     </section>
-    <section class="grid grid-cols-2 gap-4 mt-[-60px]">
+    <section class="lg:grid grid-cols-2 gap-4 mt-[-60px] sm:columns-1">
       <div class="relative">
         <img
-          class="w-full h-[90%] ml-4"
+          class="lg:w-full lg:h-[90%] lg:ml-4 sm:w-full sm:h-full sm:ml-0 sm:w-full"
           src="img/image-graphic-design.jpg"
           alt=""
         />
         <div class="absolute top-[70%]">
-          <h1 class="ml-[300px] text-3xl text-[#475e59] font-extrabold mb-2">
+          <h1
+            class="lg:ml-[300px] lg:text-3xl text-[#475e59] font-extrabold mb-2 sm:ml-[230px]"
+          >
             Graphic Design
           </h1>
           <p
-            class="text-center ml-[250px] tracking-wide text-[#394e49] font-bold"
+            class="lg:text-center lg:ml-[250px] tracking-wide text-[#394e49] font-bold sm:ml-[150px]"
           >
             Great design makes you memorable. We deliver <br />
             artwork that underscores your brand message <br />
@@ -118,13 +137,19 @@
         </div>
       </div>
       <div class="relative">
-        <img class="w-full h-[90%]" src="img/image-photography.jpg" alt="" />
+        <img
+          class="lg:w-full lg:h-[90%] sm:h-full sm:w-full"
+          src="img/image-photography.jpg"
+          alt=""
+        />
         <div class="absolute top-[70%]">
-          <h1 class="ml-[300px] text-3xl text-[#475e59] font-extrabold mb-2">
+          <h1
+            class="ml-[300px] text-3xl text-[#475e59] font-extrabold mb-2 sm:ml-[230px]"
+          >
             Photography
           </h1>
           <p
-            class="text-center ml-[165px] tracking-wide text-[#394e49] font-bold"
+            class="lg:text-center lg:ml-[165px] tracking-wide text-[#394e49] font-bold sm:ml-[130px]"
           >
             Increase your credibility by getting the most stunning, <br />
             high-quality photos that improve your business image.
@@ -134,7 +159,7 @@
     </section>
     <div>
       <h1
-        class="text-center mb-[70px] text-[#0202027a] font-extrabold text-2xl uppercase tracking-widest"
+        class="text-center mb-[70px] text-[#0202027a] font-extrabold text-2xl uppercase tracking-widest sm:mt-8"
       >
         Client testimonials
       </h1>
@@ -142,71 +167,89 @@
     <section class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-opacity-80">
       <div class="ml-[70px] w-[90%]">
         <img
-          class="w-[50px] rounded-[50px] ml-[130px] mb-3"
+          class="lg:w-[50px] rounded-[50px] lg:ml-[130px] lg:mb-3 sm:ml-[250px] sm:w-[70px]"
           src="img/image-emily.jpg"
           alt=""
         />
-        <p class="text-[15px] text-[#5A636C] font-semibold mb-[40px]">
+        <p
+          class="lg:text-[15px] text-[#5A636C] font-semibold lg:mb-[40px] sm:text-center sm:text-[20px]"
+        >
           We put our trust in Sunnyside and they delivered, <br />
           making sure our needs were met and deadlines <br />
           were always hit.
         </p>
-        <h2 class="ml-[15%] font-semibold">Emily R.</h2>
-        <p class="ml-[13%] text-[#394e49] font-medium">Marketing director</p>
+        <h2
+          class="lg:ml-[15%] lg:text-left font-semibold sm:text-center sm:ml-3"
+        >
+          Emily R.
+        </h2>
+        <p
+          class="lg:text-left lg:ml-[13%] text-[#394e49] font-medium sm:text-center sm:ml-3"
+        >
+          Marketing director
+        </p>
       </div>
 
       <div class="ml-[50px] w-[90%]">
         <img
-          class="w-[50px] rounded-[50px] ml-[130px] mb-3"
+          class="lg:w-[50px] rounded-[50px] lg:ml-[130px] mb-3 sm:ml-[270px] sm:w-[70px]"
           src="img/image-thomas.jpg"
           alt=""
         />
-        <p class="text-[15px] text-[#5A636C] font-semibold mb-[40px]">
+        <p
+          class="lg:text-[15px] text-[#5A636C] font-semibold mb-[40px] sm:text-center sm:text-[20px]"
+        >
           Sunnyside’s enthusiasm coupled with their keen interest <br />
           in our brand’s success made it a satisfying <br />
           and enjoyable experience.
         </p>
-        <h2 class="ml-[15%] font-semibold">Thomas S.</h2>
-        <p class="ml-[13%] text-[#394e49] font-medium">
+        <h2 class="ml-[15%] font-semibold sm:text-center sm:ml-3">Thomas S.</h2>
+        <p
+          class="lg:ml-[13%] text-[#394e49] lg:font-medium sm:text-center sm:ml-7"
+        >
           Chief Operating Officer
         </p>
       </div>
 
       <div class="ml-[80px] w-[90%]">
         <img
-          class="w-[50px] rounded-[50px] ml-[130px] mb-3"
+          class="lg:w-[50px] rounded-[50px] lg:ml-[130px] mb-3 sm:ml-[240px] sm:w-[70px]"
           src="img/image-jennie.jpg"
           alt=""
         />
-        <p class="text-[15px] text-[#5A636C] font-semibold mb-[40px]">
+        <p
+          class="lg:text-[15px] text-[#5A636C] font-semibold mb-[40px] sm:text-center sm:text-[20px]"
+        >
           Incredible end result! Our sales increased over <br />
           400% when we worked with Sunnyside. <br />
           Highly recommended!
         </p>
 
-        <h2 class="ml-[15%] font-semibold">Jennie F.</h2>
-        <p class="ml-[13%] mb-[60px] text-[#394e49] font-medium">
+        <h2 class="ml-[15%] font-semibold sm:text-center sm:ml-1">Jennie F.</h2>
+        <p
+          class="lg:ml-[13%] lg:mb-[60px] text-[#394e49] font-medium sm:ml-3 sm:text-center"
+        >
           Business Owner
         </p>
       </div>
     </section>
     <section
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[100%]"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-0 w-[100%]"
     >
-      <div class="m-0 w-[110%]">
+      <div class="h-full">
         <img src="img/image-gallery-milkbottles.jpg" alt="" />
       </div>
-      <div class="m-0 w-[110%]">
+      <div>
         <img src="img/image-gallery-orange.jpg" alt="" />
       </div>
-      <div class="m-0 w-[110%]">
+      <div>
         <img src="img/image-gallery-cone.jpg" alt="" />
       </div>
-      <div class="m-0 w-[110%]">
+      <div>
         <img src="img/image-gallery-sugarcubes.jpg" alt="" />
       </div>
     </section>
-    <footer class="bg-[#AFE4DA] h-[250px]">
+    <footer class="bg-[#AFE4DA] h-[250px] w-full">
       <div class="text-center">
         <h2 class="text-3xl text-[#475e59] font-extrabold pt-8 mb-5">
           sunnyside
